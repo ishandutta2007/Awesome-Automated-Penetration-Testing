@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="50%" stop-color="#0a1226"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4"/>
+      <stop offset="40%" stop-color="#7b2cbf"/>
+      <stop offset="70%" stop-color="#ff007f"/>
+      <stop offset="100%" stop-color="#00bbff"/>
+    </linearGradient>
+
+    <linearGradient id="radar-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7b2cbf" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="pill-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14213d" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1f1147" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Filters & Glows -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glow-magenta" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="title-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.9"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#132347" stroke-width="0.75" stroke-opacity="0.6"/>
+      <circle cx="40" cy="40" r="1.5" fill="#00f5d4" fill-opacity="0.2"/>
+    </pattern>
+
+    <style>
+      /* Animations */
+      @keyframes scanline {
+        0% { transform: translateY(-360px); opacity: 0; }
+        50% { opacity: 0.6; }
+        100% { transform: translateY(360px); opacity: 0; }
+      }
+
+      @keyframes radar-pulse {
+        0% { r: 10px; opacity: 0.8; }
+        50% { opacity: 0.4; }
+        100% { r: 180px; opacity: 0; }
+      }
+
+      @keyframes radar-sweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes packet-flow {
+        0% { stroke-dashoffset: 120; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      @keyframes node-blink {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.4); }
+      }
+
+      @keyframes pill-float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+
+      .scan-beam {
+        animation: scanline 7s ease-in-out infinite;
+      }
+
+      .radar-wave-1 {
+        animation: radar-pulse 4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+      }
+      .radar-wave-2 {
+        animation: radar-pulse 4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 2s;
+      }
+
+      .radar-spinner {
+        transform-origin: 1020px 180px;
+        animation: radar-sweep 8s linear infinite;
+      }
+
+      .attack-packet {
+        stroke-dasharray: 8 16;
+        animation: packet-flow 3s linear infinite;
+      }
+
+      .pulsing-node {
+        transform-origin: center;
+        animation: node-blink 3s ease-in-out infinite;
+      }
+
+      .floating-pill {
+        animation: pill-float 4s ease-in-out infinite;
+      }
+      .floating-pill-delay {
+        animation: pill-float 4s ease-in-out infinite 2s;
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Cyber Dark Base Background -->
+  <rect width="1200" height="360" fill="url(#bg-grad)"/>
+
+  <!-- Cybernetic Grid Overlay -->
+  <rect width="1200" height="360" fill="url(#cyber-grid)"/>
+
+  <!-- Subtle Glowing Orbs in Background -->
+  <circle cx="150" cy="80" r="140" fill="#7b2cbf" opacity="0.18" filter="url(#glow-magenta)"/>
+  <circle cx="1020" cy="180" r="180" fill="#00f5d4" opacity="0.12" filter="url(#glow-cyan)"/>
+  <circle cx="600" cy="300" r="130" fill="#ff007f" opacity="0.1" filter="url(#glow-magenta)"/>
+
+  <!-- Dynamic Radar Visualization (Right Edge Background) -->
+  <g opacity="0.65">
+    <circle cx="1020" cy="180" r="50" fill="none" stroke="#00f5d4" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="1020" cy="180" r="100" fill="none" stroke="#00f5d4" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+    <circle cx="1020" cy="180" r="150" fill="none" stroke="#7b2cbf" stroke-width="1" stroke-opacity="0.25"/>
+    <line x1="870" y1="180" x2="1170" y2="180" stroke="#00f5d4" stroke-width="1" stroke-opacity="0.2"/>
+    <line x1="1020" y1="30" x2="1020" y2="330" stroke="#00f5d4" stroke-width="1" stroke-opacity="0.2"/>
+
+    <!-- Radar Pulse Waves -->
+    <circle cx="1020" cy="180" r="10" fill="none" stroke="#00f5d4" stroke-width="1.5" class="radar-wave-1"/>
+    <circle cx="1020" cy="180" r="10" fill="none" stroke="#ff007f" stroke-width="1.5" class="radar-wave-2"/>
+
+    <!-- Rotating Radar Scanner Line -->
+    <g class="radar-spinner">
+      <line x1="1020" y1="180" x2="1160" y2="180" stroke="#00f5d4" stroke-width="2" filter="url(#glow-cyan)"/>
+      <path d="M 1020 180 L 1150 140 A 150 150 0 0 1 1160 180 Z" fill="url(#radar-grad)"/>
+    </g>
+  </g>
+
+  <!-- Dynamic Attack Path Graph (Background) -->
+  <g opacity="0.55">
+    <!-- Graph Links -->
+    <path d="M 80 260 L 190 200 L 290 270 L 410 190" fill="none" stroke="#223b70" stroke-width="2"/>
+    <path d="M 190 200 L 260 110 L 370 120" fill="none" stroke="#223b70" stroke-width="2"/>
+    
+    <!-- Moving Packets (Attack Propagation) -->
+    <path d="M 80 260 L 190 200 L 290 270 L 410 190" fill="none" stroke="#00f5d4" stroke-width="2.5" class="attack-packet"/>
+    <path d="M 190 200 L 260 110 L 370 120" fill="none" stroke="#ff007f" stroke-width="2" class="attack-packet"/>
+
+    <!-- Network Nodes -->
+    <circle cx="80" cy="260" r="5" fill="#00f5d4" class="pulsing-node"/>
+    <circle cx="190" cy="200" r="6" fill="#7b2cbf"/>
+    <circle cx="290" cy="270" r="4" fill="#00bbff"/>
+    <circle cx="410" cy="190" r="7" fill="#ff007f" class="pulsing-node"/>
+    <circle cx="260" cy="110" r="5" fill="#00f5d4"/>
+    <circle cx="370" cy="120" r="6" fill="#7b2cbf"/>
+  </g>
+
+  <!-- Scanning Light Beam Layer -->
+  <g class="scan-beam" pointer-events="none">
+    <rect x="0" y="0" width="1200" height="4" fill="#00f5d4" opacity="0.3" filter="url(#glow-cyan)"/>
+    <rect x="0" y="4" width="1200" height="60" fill="url(#radar-grad)" opacity="0.1"/>
+  </g>
+
+  <!-- Foreground Dimming Mask for Text Clarity -->
+  <rect x="70" y="35" width="1060" height="290" rx="20" fill="#070b14" fill-opacity="0.45" stroke="#1f2f54" stroke-width="1.2" stroke-opacity="0.5"/>
+
+  <!-- ==================== FOREGROUND CONTENT ==================== -->
+
+  <!-- Top Pill / Status Tag -->
+  <g transform="translate(100, 62)" class="floating-pill">
+    <rect width="260" height="30" rx="15" fill="url(#pill-grad)" stroke="#00f5d4" stroke-width="1" stroke-opacity="0.8"/>
+    <circle cx="18" cy="15" r="4.5" fill="#00ff88" class="pulsing-node"/>
+    <text x="32" y="20" fill="#00f5d4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">CURATED ECOSYSTEM 2026</text>
+  </g>
+
+  <!-- Secondary Dynamic Pill -->
+  <g transform="translate(375, 62)" class="floating-pill-delay">
+    <rect width="270" height="30" rx="15" fill="url(#pill-grad)" stroke="#ff007f" stroke-width="1" stroke-opacity="0.7"/>
+    <circle cx="18" cy="15" r="4.5" fill="#ff007f"/>
+    <text x="32" y="20" fill="#ff80bf" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">AUTONOMOUS EXPLOIT VALIDATION</text>
+  </g>
+
+  <!-- Main Hero Title -->
+  <g filter="url(#title-shadow)">
+    <text x="100" y="152" fill="url(#text-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5">
+      Awesome Automated Penetration Testing
+    </text>
+  </g>
+
+  <!-- Subtitle with crisp foreground styling -->
+  <text x="100" y="196" fill="#f0f4fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="500" letter-spacing="0.2">
+    Autonomous Exploit Validation <tspan fill="#00f5d4">•</tspan> Attack Path Chaining <tspan fill="#ff007f">•</tspan> Continuous Security Testing
+  </text>
+
+  <!-- Tertiary Descriptive Line -->
+  <text x="100" y="230" fill="#8ea2c6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="400">
+    A curated index of enterprise SaaS platforms, autonomous AI offensive agents, and verified open-source tooling.
+  </text>
+
+  <!-- Bottom Feature Badges / Highlights -->
+  <g transform="translate(100, 260)">
+    <!-- Pill 1: PTaaS & AI -->
+    <rect x="0" y="0" width="165" height="34" rx="8" fill="#10192e" stroke="#2a3f6f" stroke-width="1.2"/>
+    <text x="14" y="22" fill="#dbe6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600">🛡️ PTaaS &amp; Red Team</text>
+
+    <!-- Pill 2: 0-Day Discovery -->
+    <rect x="180" y="0" width="175" height="34" rx="8" fill="#10192e" stroke="#2a3f6f" stroke-width="1.2"/>
+    <text x="14" y="22" fill="#dbe6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" transform="translate(180, 0)">⚡ Exploit Chaining</text>
+
+    <!-- Pill 3: Open Source -->
+    <rect x="370" y="0" width="175" height="34" rx="8" fill="#10192e" stroke="#2a3f6f" stroke-width="1.2"/>
+    <text x="14" y="22" fill="#dbe6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" transform="translate(370, 0)">🔓 30+ OSS Toolkits</text>
+
+    <!-- Pill 4: Continuous BAS -->
+    <rect x="560" y="0" width="180" height="34" rx="8" fill="#10192e" stroke="#2a3f6f" stroke-width="1.2"/>
+    <text x="14" y="22" fill="#dbe6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" transform="translate(560, 0)">🎯 Exposure Validation</text>
+  </g>
+
+  <!-- Border Accent -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#text-grad)"/>
+</svg>

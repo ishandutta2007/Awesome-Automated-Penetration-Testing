@@ -1,253 +1,213 @@
-# Awesome-Automated-Penetration-Testing
-
-## Top Automated Penetration Testing Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on Autonomous Exploit Validation, Attack Path Chaining & Continuous Security Testing*
-
-**Last updated: March 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Automated Penetration Testing**. These tools autonomously discover, validate, and chain vulnerabilities into exploitable attack paths—proving real business impact rather than flooding teams with theoretical findings.
-
-
-
-**Examples** include Pentera, Horizon3.ai NodeZero, XBOW, Penligent, Equixly, BreachLock, Cobalt, NetSPI, Software Secured, and Synack (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, AI-driven agents, and autonomous exploit chaining—ideal for security teams, researchers, and developers seeking transparent, vendor-independent offensive security tooling.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Pentera](https://pentera.io/)**  
-
-  Exposure validation platform trusted by 1,000+ CISOs globally. Combines deterministic attack emulation with agentic AI adaptability to continuously validate security across internal networks, external surfaces, and cloud identity . Features **Pentera 7** with distributed attack orchestration for enterprise-scale validation across hundreds of thousands of endpoints. Reports **80% reduction in cyber risk**, **60% reduction in third-party pentesting costs**, and **90% faster MTTR** . Gartner Peer Insights reviewers praise realistic attack simulations and actionable remediation guidance .
-
-
-
-- **[Horizon3.ai NodeZero](https://horizon3.ai/)**  
-
-  World's most experienced AI hacker, trusted by 6,500+ organizations including the NSA, CISA, four Fortune 10 companies, and major banks . Runs production-safe autonomous pentests that chain vulnerabilities across web apps, infrastructure, cloud, data, and identity—proving real business impact . **Critical design choice**: generative models never write or fire exploits; attacks are deterministic and pre-validated, with AI picking targets and writing summaries . Raised $250M Series E at $2B+ valuation, 120% YoY ARR growth . NodeZero WebApp Pentesting covers OWASP Top 10 with full attack-path chaining from SQL injection to domain control .
-
-
-
-- **[XBOW](https://xbow.com/)**  
-
-  Autonomous offensive security platform that builds offensive AI security researchers for web applications, desktop software, servers, and IoT devices . Demonstrated **full-chain Chrome exploit affecting a billion users built in six days** with one researcher and GPT-5.6 Sol—earning first Chrome $250K bounty under 2026 rules . Found three previously unknown bugs chained across V8, WebP decoder, and Crashpad . Estimated $40K compute cost for what previously took months . Product supports full pentest, incremental assessment, and retest modes with authenticated, white-box, and context-enriched testing .
-
-
-
-- **[Penligent](https://penligent.ai/)**  
-
-  AI-powered penetration testing platform for automated security assessment and vulnerability discovery.
-
-
-
-- **[Equixly](https://equixly.com/)**  
-
-  AI-driven API security testing platform that autonomously discovers and exploits API vulnerabilities.
-
-
-
-- **[BreachLock](https://www.breachlock.com/)**  
-
-  Human-delivered and AI-augmented penetration testing as a service (PTaaS). Combines certified pentesters with automated scanning.
-
-
-
-- **[Cobalt](https://cobalt.io/)**  
-
-  Pentest as a Service (PTaaS) platform connecting organizations with vetted security researchers. Per-engagement testing with human judgment.
-
-
-
-- **[NetSPI](https://www.netspi.com/)**  
-
-  Enterprise penetration testing, red teaming, and attack surface management. Combines human expertise with proprietary tooling.
-
-
-
-- **[Software Secured](https://www.softwaresecured.com/)**  
-
-  Application security firm offering penetration testing and secure code review services.
-
-
-
-- **[Synack](https://www.synack.com/)**  
-
-  Crowdsourced security testing platform for government and regulated enterprise. Vetted researchers test through a platform with point-in-time engagements.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[Strix](https://github.com/strix-ai/strix)**  
-
-  Leading open-source AI-native pentest framework (license varies). Runs autonomous AI agents that behave like real attackers—dynamically executing code, probing OWASP Top 10 and beyond, and **validating every finding with a working proof-of-concept exploit** rather than "possible issue" flags . Multi-agent architecture specializes agents by phase (reconnaissance, exploitation, reporting) that share findings and chain them into larger attack paths. Docker-based with strong self-hosting path. One of the most-starred projects in this category .
-
-
-
-- **[PentestGPT](https://github.com/GreyDGL/PentestGPT)**  
-
-  LLM co-pilot for human testers rather than fully autonomous scanner . Maintains running "task tree" of engagement, suggests next logical step, generates specific commands/scripts, and parses messy tool output into findings that matter. Removes cognitive overhead of deciding what to try next during manual engagement. Open-source and free .
-
-
-
-- **[Nuclei](https://github.com/projectdiscovery/nuclei)**  
-
-  Fast, YAML-template-driven scanner with enormous community-maintained template library—new templates ship within days of major CVE disclosure . 2025-2026 releases added **AI-assisted template generation**: describe vulnerability in plain language and tool drafts working detection template. Ideal for scalable scanning with current detection .
-
-
-
-- **[OWASP ZAP](https://github.com/zaproxy/zaproxy)**  
-
-  Longest-established open-source web-app scanner (Apache-2.0). Active OWASP backing with automated and manual testing modes . **Note**: ZAP's core developers joined Checkmarx in September 2024 and project rebranded "ZAP by Checkmarx," staying Apache-2.0 with independent Core Team governance . Baseline and full-scan Docker images common in CI/CD pipelines. Community AI-assisted scan add-ons emerging .
-
-
-
-- **[Metasploit Framework](https://github.com/rapid7/metasploit-framework)**  
-
-  Industry-standard exploitation framework (BSD-3-Clause for community edition). Vast, actively maintained catalogue of validated exploits that turns detected vulnerability into proof of exploitability . Community edition free; Metasploit Pro sold by Rapid7 for GUI, reporting, and support . Requires dedicated VPS with careful scope controls due to real exploit capability .
-
-
-
-- **[Faraday](https://github.com/infobyte/faraday)**  
-
-  Open-source vulnerability management platform (GPL-3.0) that ingests and deduplicates output from **80+ tools** (Nmap, Nessus, Burp, Nuclei, Metasploit, and more) into one shared workspace . Docker Compose with PostgreSQL backend. Built specifically for pentest and red-team collaboration rather than CI/CD DevSecOps pipelines .
-
-
-
-- **[Recon-ng](https://github.com/lanmaster53/recon-ng)**  
-
-  Modular Python-based reconnaissance framework (GPL-3.0) for OSINT and attack-surface-mapping phase . Subdomain enumeration, technology fingerprinting, and similar recon tasks. Scriptable and extensible .
-
-
-
-- **[Nettacker](https://github.com/OWASP/Nettacker)**  
-
-  OWASP automated penetration testing framework (Apache-2.0). Automated vulnerability scanning, information gathering, and reporting. Active project listed in curated automated pentest directories .
-
-
-
-- **[CloudFox](https://github.com/BishopFox/cloudfox)**  
-
-  Automated cloud penetration testing tool (MIT) from Bishop Fox. Enumerates cloud environments to find exploitable attack paths and privilege escalation opportunities .
-
-
-
-- **[PentAGI](https://github.com/vxcontrol/pentagi)**  
-
-  Autonomous AI pentesting framework (MIT). Listed in curated automated pentest directories with autonomous execution model for web and network testing .
-
-
-
-- **[CyberStrike](https://github.com/CyberStrikeus/CyberStrike)**  
-
-  Autonomous AI pentesting platform (AGPL-3.0). Web and network testing with autonomous execution model .
-
-
-
-- **[DeepSec](https://github.com/Unclecheng-li/DeepSec)**  
-
-  Autonomous AI pentesting tool (MIT). Web and network testing with autonomous execution model .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **[sqlmap](https://github.com/sqlmapproject/sqlmap)** — Automatic SQL injection and database takeover tool (GPL-2.0). Still owns its narrow, specific job .
-
-- **[Nikto](https://github.com/sullo/nikto)** — Web server scanner (GPL-2.0) for outdated software, dangerous files, and misconfigurations .
-
-- **[Hydra](https://github.com/vanhauser-thc/thc-hydra)** — Fast network login cracker (AGPL-3.0) supporting SSH, RDP, HTTP, and more .
-
-- **[John the Ripper](https://github.com/openwall/john)** — Offline password cracker (GPL-2.0) for auditing password strength .
-
-- **[Wireshark](https://gitlab.com/wireshark/wireshark)** — Network protocol analyzer (GPL-2.0) for packet-level inspection .
-
-- **[Trivy](https://github.com/aquasecurity/trivy)** — Container and filesystem vulnerability scanner (Apache-2.0) .
-
-- **[Grype](https://github.com/anchore/grype)** — Container vulnerability scanner (Apache-2.0) from Anchore .
-
-- Community **n8n** workflows for pentest automation and finding triage.
-
-
-
-**Frameworks for building custom systems**: Combine **Strix** for autonomous exploit validation with **Nuclei** for scalable template-based scanning, **PentestGPT** for guided manual testing assistance, **Faraday** for multi-tool findings consolidation, and **Docker** for isolated agent execution—creating a fully self-hosted, enterprise-grade automated penetration testing platform.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Automated penetration testing must be authorized. **Never run these tools against systems you do not own or have explicit written permission to test.** Unauthorized testing is illegal under CFAA, Computer Misuse Act, and equivalent laws worldwide.
-
-- **Autonomous pentesting has a reliability ceiling.** Independent research testing an internal web application found agents surfaced relevant minor improvement areas but **completely missed an exposed admin interface with default credentials**—a vulnerability no human pentester would overlook. Reports also included a non-existent critical vulnerability (JWT algorithm confusion) with non-working proof-of-exploit scripts .
-
-- **Non-determinism is visible.** Two runs against the same target can produce substantially different findings and reports. Without insufficient scope controls, some models attempt to expand assessment scope by probing adjacent ports, applications, or subdomains .
-
-- **Business logic understanding remains shallow.** Outputs align strongly with generic OWASP-style patterns and may not challenge real business risk or abuse scenarios in sufficiently contextual ways .
-
-- **Sovereignty and confidentiality matter.** Offensive security assessments consolidate highly sensitive technical information about organizational weaknesses. SaaS LLM dependency raises questions about prompts, traces, findings, and attack hypotheses leaving your environment. Data anonymization before LLM step may not be reliable mitigation .
-
-- **Human validation still matters.** Even frontier-grade models miss critical vulnerabilities and produce false positives. Combine autonomous tools with human review and retesting for production-grade assurance. Legacy scanners find issues; automated pentesting proves which ones attackers could exploit .
-
-
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Automated Penetration Testing Banner - Autonomous Exploit Validation and Security Testing" width="100%" />
+</p>
+
+<h1 align="center">⚔️ Awesome Automated Penetration Testing</h1>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a><a href="https://github.com/ishandutta2007/Awesome-Automated-Penetration-Testing/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Automated-Penetration-Testing?style=flat-square&logo=github" alt="GitHub stars" /></a><a href="https://github.com/ishandutta2007/Awesome-Automated-Penetration-Testing/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Automated-Penetration-Testing?style=flat-square&logo=github" alt="GitHub forks" /></a><a href="https://github.com/ishandutta2007/Awesome-Automated-Penetration-Testing/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Automated-Penetration-Testing?style=flat-square" alt="Issues" /></a><a href="https://github.com/ishandutta2007/Awesome-Automated-Penetration-Testing/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a><a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+<p align="center">
+  <b>A comprehensive, curated directory of leading SaaS platforms, autonomous AI offensive agents, and battle-tested open-source tools for Automated Penetration Testing, Autonomous Exploit Validation, Multi-Stage Attack Path Chaining, and Continuous Security Testing.</b>
+</p>
 
 ---
 
+## 📖 Table of Contents
 
+- [🎯 Overview & Scope](#-overview--scope)
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 Enterprise SaaS & Hosted Platforms](#-enterprise-saas--hosted-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🛡️ Key Differences: Automated Pentesting vs. Vulnerability Scanning](#-key-differences-automated-pentesting-vs-vulnerability-scanning)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚠️ Disclaimer & Ethical Conduct](#-disclaimer--ethical-conduct)
+- [⭐ Star History](#-star-history)
+- [💖 Support & Sponsoring](#-support--sponsoring)
 
-**Made for security engineers, red teamers, AppSec professionals, and developers building transparent offensive security solutions.**
+---
 
-Let's make Automated Penetration Testing more open, data-driven, and verifiable.
+## 🎯 Overview & Scope
+
+Traditional vulnerability scanning and static security tools flood SecOps and engineering teams with theoretical vulnerabilities and uncontextualized alert fatigue. **Automated Penetration Testing** and **Autonomous Security Validation** revolutionize offensive security by autonomously discovering, validating, and chaining vulnerabilities into end-to-end exploitable attack paths—proving verifiable business impact rather than speculative risk.
+
+This repository tracks top-tier commercial **SaaS/PTaaS platforms** and active **open-source repositories** across:
+- 🤖 **Autonomous AI Agents & Copilots**: Multi-agent LLM systems dynamically generating proof-of-concept (PoC) exploits.
+- 🔗 **Attack Path Chaining**: Automated escalation across web apps, APIs, Active Directory, cloud IAM, and network infrastructure.
+- 🔄 **Continuous Exposure Validation & BAS**: Breach and Attack Simulation (BAS) validating detection defenses against real-time MITRE ATT&CK tactics.
+
+---
+
+## 🌐 Sector Overview & Market Dynamics
+
+The global penetration testing and automated security validation market was valued at **$2.45 billion in 2024**, is estimated between **$2.50 billion and $3.09 billion in 2026**, and is projected to expand to **$5.24 billion by 2030**, reflecting a vigorous compound annual growth rate (**CAGR of 14.2% – 18.7%**).
+
+The sector is currently **moderately to highly fragmented** rather than a winner-take-all monopoly: established enterprise PTaaS leaders and cybersecurity giants coexist alongside pioneering autonomous validation platforms (such as Pentera and Horizon3.ai) and fast-moving agentic AI startups (like XBOW and Equixly). This fragmentation is sustained by disparate customer requirements—ranging from compliance mandates (PCI DSS 4.0, DORA, FedRAMP) and zero-trust cloud architectures to strict human-in-the-loop regulatory guardrails that prevent any single provider from dominating the offensive security landscape.
+
+---
+
+## 🏢 Enterprise SaaS & Hosted Platforms
+
+The table below catalogs premier commercial SaaS, PTaaS, and autonomous security validation platforms. Companies are sorted in **descending order by company size (Valuation / Revenue)**.
+
+| Platform / Vendor 🏢 | Company Size (Valuation / Revenue) 📈 | Core Capabilities & Autonomous Focus 🎯 | Specific Starting Tier Pricing 💰 | Specific Free Tier / Trial Limits ⏳ |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Horizon3.ai NodeZero](https://horizon3.ai/)** | **$2.0B+ Valuation**<br>*(Raised $250M Series E; ~$50M+ ARR)* | Production-safe autonomous pentesting across cloud, internal network, web apps, and Active Directory; chains deterministic exploits into full attack paths. | **$15,000 / year**<br>*(Core Tier: unlimited autonomous tests within defined host scope, ~$50/asset)* | **30-Day Free Trial**<br>*(Requires corporate domain email; includes 1 full autonomous pentest assessment; transitions to read-only reporting)* |
+| **[XBOW](https://xbow.com/)** | **$1.0B+ Valuation**<br>*(Unicorn; $270M+ raised from Sequoia, Altimeter & NVentures)* | Autonomous agentic AI security researcher discovering 0-days and executing full-chain exploits across web apps, APIs, desktop apps, and firmware. | **$4,000 / assessment**<br>*(Lightspeed Plus tier for single app testing; $8,000 for Lightspeed Premium)* | **14-Day Enterprise Evaluation**<br>*(Includes 1 target web app assessment and PoC exploit demonstration upon scoping verification)* |
+| **[Pentera](https://pentera.io/)** | **$1.0B Valuation**<br>*(Unicorn; Series C led by K1; ~$42M+ ARR)* | Automated security validation platform combining deterministic attack emulation with agentic AI across internal networks, external surfaces, and cloud identities. | **$35,000 / year**<br>*(Pentera Core baseline annual contract for internal network exposure validation)* | **14-Day Guided Proof-of-Concept (PoC)**<br>*(Includes 1 external attack surface validation scan scoped up to 1 corporate CIDR/domain)* |
+| **[NetSPI](https://www.netspi.com/)** | **~$1.0B Valuation**<br>*(Backed by $410M PE investment from KKR; ~$100M+ ARR)* | Enterprise Penetration Testing as a Service (PTaaS), Attack Surface Management (ASM), and automated breach & attack simulation with expert human validation. | **$7,000 / year**<br>*(Baseline Attack Surface Management tier; PTaaS manual/automated hybrid starts at ~$15,000/engagement)* | **14-Day Enterprise Pilot**<br>*(Sales-qualified evaluation scoped to 1 application or 1 external IP/domain range with platform telemetry)* |
+| **[Synack](https://www.synack.com/)** | **~$500M Valuation**<br>*(Raised $180M+; ~$50M–$80M ARR)* | Crowdsourced offensive security platform combining continuous autonomous scanning (Sara AI) with vetted Synack Red Team (SRT) ethical hackers. | **$4,000 / test**<br>*(Sara AI Pentest; full continuous testing platform subscriptions start at $5,060/year + testing credits)* | **Free Forever Basic Platform Tier**<br>*(Free $0 platform access for vulnerability intake, analytics & triage; live penetration testing credits purchased separately)* |
+| **[Cobalt](https://cobalt.io/)** | **~$200M+ Valuation**<br>*(Raised $67M+; ~$40M+ ARR)* | Pentest as a Service (PTaaS) platform uniting automated vulnerability scanning with on-demand human security researchers for rapid agile testing. | **$3,500 / pentest**<br>*(Autonomous Pentest tier; continuous enterprise PTaaS platform subscriptions start at $15,000/year)* | **14-Day Guided Preview**<br>*(Includes provisioned dashboard access and 1 preliminary external attack surface & DAST discovery scan)* |
+| **[BreachLock](https://www.breachlock.com/)** | **~$50M Valuation**<br>*(Series A funded; ~$10M–$15M ARR)* | Hybrid PTaaS platform combining AI-driven automated vulnerability scanning with certified human penetration testing for compliance (SOC 2, ISO 27001). | **$2,500 / assessment**<br>*(1-Time Security Validation; annual continuous security validation programs start at $5,000/year)* | **14-Day Free Evaluation**<br>*(Includes automated external attack surface discovery scan for up to 1 corporate domain)* |
+| **[Equixly](https://equixly.com/)** | **~$45M Valuation**<br>*(Raised €11.5M Series A in Dec 2025 led by 33N & AIC)* | Agentic AI API penetration testing platform that reverse-engineers business logic and autonomously discovers and exploits API vulnerabilities. | **€4,999 (~$5,400) / test**<br>*(Complete one-off AI API pentest with remediation guidance; custom annual continuous platform licenses)* | **14-Day Interactive Pentest Demo**<br>*(Autonomous discovery and testing scoped to 1 OpenAPI / Swagger collection with executive report generation)* |
+| **[Software Secured](https://www.softwaresecured.com/)** | **~$5M ARR**<br>*(Bootstrapped & profitable)* | Boutique application security and continuous PTaaS (Sherloq) designed for high-growth B2B SaaS and AI platforms requiring verifiable SOC 2 assurance. | **$5,000 / engagement**<br>*(Scoped single application assessment; continuous Sherloq PTaaS subscription starts at $15,000/year)* | **30-Minute Threat & Scope Assessment**<br>*(Free architecture consultation, scope calibration, and sample vulnerability audit report)* |
+| **[Penligent](https://penligent.ai/)** | **~$3M–$5M Valuation**<br>*(Seed stage / early venture)* | Autonomous AI agent for offensive security executing reconnaissance, WAF evasion, payload crafting, and multi-tool exploit reproduction. | **$39.92 / month**<br>*(Pro Tier billed annually at $479/yr; includes 6,000 monthly execution credits for ~5 targets)* | **Free Forever Tier ($0/mo)**<br>*(Includes 200 monthly credits, automated asset discovery, port/fingerprint probing, and PDF/Markdown reports)* |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+Explore the open-source offensive security, automated exploitation, and vulnerability assessment frameworks. All projects are sorted in **descending order by GitHub star count** ⭐.
+
+1. **[Strix](https://github.com/usestrix/strix)** [![GitHub stars](https://img.shields.io/github/stars/usestrix/strix?style=social&color=white)](https://github.com/usestrix/strix/stargazers) — **68,400+ ⭐** `Apache-2.0`  
+   Autonomous AI-native penetration testing framework. Deploys collaborating multi-agent teams that dynamically execute code, probe OWASP Top 10 vulnerabilities, and validate every finding with a working proof-of-concept (PoC) exploit in sandboxed Docker containers.
+
+2. **[Metasploit Framework](https://github.com/rapid7/metasploit-framework)** [![GitHub stars](https://img.shields.io/github/stars/rapid7/metasploit-framework?style=social&color=white)](https://github.com/rapid7/metasploit-framework/stargazers) — **39,100+ ⭐** `BSD-3-Clause`  
+   The industry-standard exploitation framework providing the world's largest public database of quality-assured exploits, shellcodes, and automated post-exploitation pivoting modules.
+
+3. **[sqlmap](https://github.com/sqlmapproject/sqlmap)** [![GitHub stars](https://img.shields.io/github/stars/sqlmapproject/sqlmap?style=social&color=white)](https://github.com/sqlmapproject/sqlmap/stargazers) — **38,600+ ⭐** `GPL-2.0`  
+   Automatic SQL injection and database takeover engine supporting database fingerprinting, data extraction, direct OS file system access, and out-of-band shell execution.
+
+4. **[Trivy](https://github.com/aquasecurity/trivy)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers) — **38,400+ ⭐** `Apache-2.0`  
+   Comprehensive, fast automated vulnerability and misconfiguration scanner for container images, Kubernetes clusters, Git repositories, virtual machine disks, and cloud environments.
+
+5. **[Nuclei](https://github.com/projectdiscovery/nuclei)** [![GitHub stars](https://img.shields.io/github/stars/projectdiscovery/nuclei?style=social&color=white)](https://github.com/projectdiscovery/nuclei/stargazers) — **32,000+ ⭐** `MIT`  
+   Fast, highly customizable vulnerability scanner powered by community-curated YAML templates. Features AI-assisted template drafting and zero-day exposure scanning across massive asset scopes.
+
+6. **[PentAGI](https://github.com/vxcontrol/pentagi)** [![GitHub stars](https://img.shields.io/github/stars/vxcontrol/pentagi?style=social&color=white)](https://github.com/vxcontrol/pentagi/stargazers) — **28,300+ ⭐** `MIT`  
+   Fully autonomous AI agent framework capable of executing end-to-end offensive penetration testing campaigns, hypothesis testing, and vulnerability chaining.
+
+7. **[PEASS-ng (LinPEAS / WinPEAS)](https://github.com/peass-ng/PEASS-ng)** [![GitHub stars](https://img.shields.io/github/stars/peass-ng/PEASS-ng?style=social&color=white)](https://github.com/peass-ng/PEASS-ng/stargazers) — **20,600+ ⭐** `GPL-3.0`  
+   Automated privilege escalation scripts for Linux, Windows, and macOS searching for misconfigurations, weak permissions, stored credentials, and exploitable kernel paths.
+
+8. **[Katana](https://github.com/projectdiscovery/katana)** [![GitHub stars](https://img.shields.io/github/stars/projectdiscovery/katana?style=social&color=white)](https://github.com/projectdiscovery/katana/stargazers) — **17,600+ ⭐** `MIT`  
+   Next-generation crawling and spidering framework with headless browser navigation and automated endpoint mapping for deep attack surface discovery.
+
+9. **[ffuf](https://github.com/ffuf/ffuf)** [![GitHub stars](https://img.shields.io/github/stars/ffuf/ffuf?style=social&color=white)](https://github.com/ffuf/ffuf/stargazers) — **16,800+ ⭐** `MIT`  
+   Extremely fast web fuzzer written in Go for discovering hidden directories, parameters, virtual hosts, and API routing vulnerabilities.
+
+10. **[OWASP ZAP](https://github.com/zaproxy/zaproxy)** [![GitHub stars](https://img.shields.io/github/stars/zaproxy/zaproxy?style=social&color=white)](https://github.com/zaproxy/zaproxy/stargazers) — **15,900+ ⭐** `Apache-2.0`  
+    The flagship OWASP open-source web application security scanner (ZAP by Checkmarx), offering automated vulnerability scans, CI/CD integrations, and deep intercepting proxy features.
+
+11. **[PentestGPT](https://github.com/GreyDGL/PentestGPT)** [![GitHub stars](https://img.shields.io/github/stars/GreyDGL/PentestGPT?style=social&color=white)](https://github.com/GreyDGL/PentestGPT/stargazers) — **15,900+ ⭐** `MIT`  
+    LLM-powered interactive agentic copilot for penetration testers. Maintains an evolving task tree of engagements, analyzes complex tool outputs, and suggests optimal attack vectors.
+
+12. **[Amass](https://github.com/owasp-amass/amass)** [![GitHub stars](https://img.shields.io/github/stars/owasp-amass/amass?style=social&color=white)](https://github.com/owasp-amass/amass/stargazers) — **15,300+ ⭐** `Apache-2.0`  
+    In-depth attack surface mapping and network external asset discovery framework using active recon and open-source OSINT data gathering.
+
+13. **[Prowler](https://github.com/prowler-cloud/prowler)** [![GitHub stars](https://img.shields.io/github/stars/prowler-cloud/prowler?style=social&color=white)](https://github.com/prowler-cloud/prowler/stargazers) — **15,000+ ⭐** `Apache-2.0`  
+    Open-source cloud security scanner for AWS, Azure, GCP, and Kubernetes performing automated security audits, incident response assessments, and continuous compliance checks.
+
+14. **[John the Ripper](https://github.com/openwall/john)** [![GitHub stars](https://img.shields.io/github/stars/openwall/john?style=social&color=white)](https://github.com/openwall/john/stargazers) — **13,700+ ⭐** `GPL-2.0`  
+    High-performance offline password auditing and recovery utility supporting hundreds of hash and cipher formats across diverse architectures.
+
+15. **[Nmap](https://github.com/nmap/nmap)** [![GitHub stars](https://img.shields.io/github/stars/nmap/nmap?style=social&color=white)](https://github.com/nmap/nmap/stargazers) — **13,700+ ⭐** `Nmap Public Source License`  
+    The legendary network discovery and port auditing tool featuring the Nmap Scripting Engine (NSE) for automated vulnerability detection and service exploitation.
+
+16. **[Grype](https://github.com/anchore/grype)** [![GitHub stars](https://img.shields.io/github/stars/anchore/grype?style=social&color=white)](https://github.com/anchore/grype/stargazers) — **13,000+ ⭐** `Apache-2.0`  
+    Rapid, automated vulnerability scanner for container images and file systems developed by Anchore.
+
+17. **[THC-Hydra](https://github.com/vanhauser-thc/thc-hydra)** [![GitHub stars](https://img.shields.io/github/stars/vanhauser-thc/thc-hydra?style=social&color=white)](https://github.com/vanhauser-thc/thc-hydra/stargazers) — **12,300+ ⭐** `AGPL-3.0`  
+    Very fast parallelized network login cracker supporting over 50 protocols (SSH, FTP, HTTP, SMB, RDP, databases).
+
+18. **[Sn1per](https://github.com/1N3/Sn1per)** [![GitHub stars](https://img.shields.io/github/stars/1N3/Sn1per?style=social&color=white)](https://github.com/1N3/Sn1per/stargazers) — **11,400+ ⭐** `Custom`  
+    Automated attack surface management platform and penetration testing orchestrator executing automated multi-tool recon and exploitation pipelines.
+
+19. **[Nikto](https://github.com/sullo/nikto)** [![GitHub stars](https://img.shields.io/github/stars/sullo/nikto?style=social&color=white)](https://github.com/sullo/nikto/stargazers) — **10,700+ ⭐** `GPL-2.0`  
+    Web server vulnerability scanner checking for 6,700+ dangerous files/programs, outdated server versions, and web misconfigurations.
+
+20. **[BloodHound](https://github.com/BloodHoundAD/BloodHound)** [![GitHub stars](https://img.shields.io/github/stars/BloodHoundAD/BloodHound?style=social&color=white)](https://github.com/BloodHoundAD/BloodHound/stargazers) — **10,600+ ⭐** `GPL-3.0`  
+    Graph-theory tool using graph analysis to reveal hidden, unintended, and exploitable relationship paths in Active Directory and Azure/Entra ID architectures.
+
+21. **[Wireshark](https://github.com/wireshark/wireshark)** [![GitHub stars](https://img.shields.io/github/stars/wireshark/wireshark?style=social&color=white)](https://github.com/wireshark/wireshark/stargazers) — **10,000+ ⭐** `GPL-2.0`  
+    The premier network protocol analyzer for deep live capture inspection, micro-level packet dissection, and traffic auditing.
+
+22. **[WPScan](https://github.com/wpscanteam/wpscan)** [![GitHub stars](https://img.shields.io/github/stars/wpscanteam/wpscan?style=social&color=white)](https://github.com/wpscanteam/wpscan/stargazers) — **9,800+ ⭐** `Custom`  
+    Black box WordPress vulnerability scanner for automated discovery of vulnerable plugins, themes, and WordPress core security flaws.
+
+23. **[Faraday](https://github.com/infobyte/faraday)** [![GitHub stars](https://img.shields.io/github/stars/infobyte/faraday?style=social&color=white)](https://github.com/infobyte/faraday/stargazers) — **6,700+ ⭐** `GPL-3.0`  
+    Collaborative open-source vulnerability management workspace that ingests, deduplicates, and manages findings across 80+ offensive tools.
+
+24. **[AutoRecon](https://github.com/Tib3rius/AutoRecon)** [![GitHub stars](https://img.shields.io/github/stars/Tib3rius/AutoRecon?style=social&color=white)](https://github.com/Tib3rius/AutoRecon/stargazers) — **6,100+ ⭐** `GPL-3.0`  
+    Multi-threaded network reconnaissance tool that automates port scanning, service enumeration, and targeted tool triggering.
+
+25. **[Recon-ng](https://github.com/lanmaster53/recon-ng)** [![GitHub stars](https://img.shields.io/github/stars/lanmaster53/recon-ng?style=social&color=white)](https://github.com/lanmaster53/recon-ng/stargazers) — **5,900+ ⭐** `GPL-3.0`  
+    Modular, Python-based web reconnaissance framework with an interactive shell for automated OSINT gathering and external threat surface mapping.
+
+26. **[Commix](https://github.com/commixproject/commix)** [![GitHub stars](https://img.shields.io/github/stars/commixproject/commix?style=social&color=white)](https://github.com/commixproject/commix/stargazers) — **5,800+ ⭐** `GPL-3.0`  
+    Automated tool for detecting and exploiting command injection vulnerabilities and converting command execution flaws into interactive root shells.
+
+27. **[OWASP Nettacker](https://github.com/OWASP/Nettacker)** [![GitHub stars](https://img.shields.io/github/stars/OWASP/Nettacker?style=social&color=white)](https://github.com/OWASP/Nettacker/stargazers) — **5,600+ ⭐** `Apache-2.0`  
+    Automated penetration testing and vulnerability discovery framework from OWASP designed for network exploration and compliance reporting.
+
+28. **[Pacu](https://github.com/RhinoSecurityLabs/pacu)** [![GitHub stars](https://img.shields.io/github/stars/RhinoSecurityLabs/pacu?style=social&color=white)](https://github.com/RhinoSecurityLabs/pacu/stargazers) — **5,300+ ⭐** `BSD-3-Clause`  
+    Open-source AWS exploitation framework created by Rhino Security Labs for testing cloud privilege escalation paths and IAM misconfigurations.
+
+29. **[CyberStrike](https://github.com/CyberStrikeus/CyberStrike)** [![GitHub stars](https://img.shields.io/github/stars/CyberStrikeus/CyberStrike?style=social&color=white)](https://github.com/CyberStrikeus/CyberStrike/stargazers) — **3,100+ ⭐** `AGPL-3.0`  
+    Autonomous AI pentesting platform providing automated web and network testing workflows with minimal manual intervention.
+
+30. **[CloudFox](https://github.com/BishopFox/cloudfox)** [![GitHub stars](https://img.shields.io/github/stars/BishopFox/cloudfox?style=social&color=white)](https://github.com/BishopFox/cloudfox/stargazers) — **2,600+ ⭐** `MIT`  
+    Bishop Fox's command-line tool for situational awareness and rapid identification of exploitable attack paths in cloud environments.
+
+31. **[DeepSec](https://github.com/Unclecheng-li/DeepSec)** [![GitHub stars](https://img.shields.io/github/stars/Unclecheng-li/DeepSec?style=social&color=white)](https://github.com/Unclecheng-li/DeepSec/stargazers) — **480+ ⭐** `MIT`  
+    Autonomous AI pentesting tool using reinforcement learning and agentic feedback loops for automated web application penetration testing.
+
+---
+
+## 🛡️ Key Differences: Automated Pentesting vs. Vulnerability Scanning
+
+| Dimension 📐 | Vulnerability Scanning (DAST / Nessus / Qualys) 🔍 | Automated Penetration Testing (Horizon3, Pentera, Strix) ⚔️ |
+| :--- | :--- | :--- |
+| **Objective** | Flags potential CVEs based on software version headers and banners. | Proves exploitability by executing real, safe exploit payloads. |
+| **Attack Chaining** | Evaluates isolated vulnerabilities independently. | Automatically chains minor flaws (e.g., SSRF + leaked token + IAM escalation). |
+| **False Positives** | High (often 40%–60% non-exploitable noise). | Near-zero (findings require verifiable Proof-of-Concept execution). |
+| **Business Impact** | Theoretical risk scores (CVSS base scores). | Demonstrated operational risk (e.g., Domain Admin takeover, DB data dump). |
+| **Frequency** | Periodic scheduled scans (weekly/monthly). | Continuous automated validation integrated with CI/CD and production telemetry. |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions from security researchers, red teamers, and software developers are warmly welcome!
+
+1. 🍴 **Fork the repository** to your GitHub account.
+2. 🌿 **Create a new branch** (`git checkout -b feature/add-new-tool`).
+3. 📝 **Add or update entries** following the established format:
+   - For **SaaS products**: include company name, link, valuation/revenue, capabilities, starting tier price, and specific free tier/trial limits.
+   - For **Open-Source tools**: include project link, star count badge (`https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white` linking to the stargazers page), license, and an accurate 1–2 sentence description. Maintain descending order by star count.
+4. 🚀 **Submit a Pull Request** with a concise summary of the addition or update.
+
+---
+
+## ⚠️ Disclaimer & Ethical Conduct
+
+- 🔒 **Authorized Testing Only**: Automated penetration testing tools must only be run against networks, applications, and environments you explicitly own or have **written authorization** to test. Unauthorized penetration testing is illegal under the Computer Fraud and Abuse Act (CFAA), the UK Computer Misuse Act, and international cyber legislation.
+- 🧪 **Autonomous Limitations**: While autonomous offensive agents drastically accelerate validation, human expertise remains vital for complex business-logic flaws, authorization bypasses, and nuanced architectural design evaluations.
+- 🛡️ **Defensive Sovereignty**: Ensure that traces, API keys, and internal vulnerability findings generated during AI-driven tests are handled in compliance with your organization's data protection and confidentiality mandates.
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Automated-Penetration-Testing&tyee=date&legend=top-left)](https://star-history.dera.page/#isaandutta2007/Awesome-Automated-Penetration-Testing&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Sponsoring
+
+Thank you for visiting and supporting **Awesome Automated Penetration Testing**! If you find this curated collection useful for your offensive security operations, red team exercises, or compliance readiness:
+
+- ⭐ **Star this repository** to help other security professionals discover it!
+- 🍴 **Fork and share** with your SecOps and AppSec teams.
+- ☕ **Sponsor the Project**: If you would like to support ongoing research, curation, and maintenance of open offensive security resources, please consider buying a coffee via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
